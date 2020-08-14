@@ -1,0 +1,39 @@
+{
+  "builders": [
+    {
+      "communicator": "none",
+      "guest_additions_mode": "disable",
+      "type": "virtualbox-vm",
+      "virtualbox_version_file": "",
+      "vm_name": "{{user `vm_name`}}"
+    }
+  ],
+  "description": "Build vagrant box for Alpine Linux x86_64",
+  "post-processors": [
+    [
+      {
+        "include": [
+          "info.json"
+        ],
+        "output": "output-vagrant/{{user `box_name`}}.box",
+        "type": "vagrant",
+        "vagrantfile_template": "Vagrantfile"
+      },
+      {
+        "access_token": "{{user `vagrant_cloud_token`}}",
+        "box_tag": "{{user `box_tag`}}",
+        "type": "vagrant-cloud",
+        "version": "{{user `box_version`}}",
+        "version_description": "{{user `box_version_description`}}"
+      }
+    ]
+  ],
+  "variables": {
+    "box_name": "alpine312",
+    "box_tag": "bobfraser1/alpine312",
+    "box_version": "1.0.0",
+    "box_version_description": "Alpine Linux v3.12.0\n\nGitHub: [bobfraser1/packer-alpine](https://github.com/bobfraser1/packer-alpine)",
+    "vagrant_cloud_token": "{{env `VC_TOKEN`}}",
+    "vm_name": "alpine-3.12.0-x86_64"
+  }
+}

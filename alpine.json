@@ -24,6 +24,7 @@
         "{{user `iso_local_url`}}",
         "{{user `iso_download_url`}}"
       ],
+      "keep_registered": "false",
       "shutdown_command": "/sbin/poweroff",
       "ssh_password": "{{user `ssh_password`}}",
       "ssh_timeout": "10m",
@@ -105,4 +106,3 @@
     "vm_name": "alpine-3.12.0-x86_64"
   }
 }
-

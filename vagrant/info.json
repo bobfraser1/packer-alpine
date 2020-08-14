@@ -1,0 +1,6 @@
+{
+  "Author": "Bob Fraser",
+  "Artifacts": "https://vagrantcloud.com/bobfraser1",
+  "Repository": "https://github.com/bobfraser1/packer-alpine",
+  "Description": "Vagrant box for Alpine Linux x86_64"
+}

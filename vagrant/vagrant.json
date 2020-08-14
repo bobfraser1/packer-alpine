@@ -1,0 +1,28 @@
+{
+  "builders": [
+    {
+      "communicator": "none",
+      "guest_additions_mode": "disable",
+      "type": "virtualbox-vm",
+      "virtualbox_version_file": "",
+      "vm_name": "{{user `vm_name`}}"
+    }
+  ],
+  "description": "Build vagrant box for Alpine Linux x86_64",
+  "post-processors": [
+    [
+      {
+        "include": [
+          "info.json"
+        ],
+        "output": "output-vagrant/{{user `box_name`}}.box",
+        "type": "vagrant",
+        "vagrantfile_template": "Vagrantfile"
+      }
+    ]
+  ],
+  "variables": {
+    "box_name": "alpine312",
+    "vm_name": "alpine-3.12.0-x86_64"
+  }
+}

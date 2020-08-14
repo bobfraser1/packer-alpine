@@ -16,6 +16,8 @@ You can customize this login
 
 Further customization is possible by overriding other variables, or editing `alpine.json` or `http/answers`.
 
-## Vagrant Ready
+## Vagrant Support
 
-[Vagrant](https://vagrantup.com) is not required to build the image. However, the image can easily be turned into a [Vagrant Base Box](https://www.vagrantup.com/docs/boxes/base).
+[Vagrant](https://vagrantup.com) is not required to build the image. However, the image can easily be turned into a [Vagrant Base Box](https://www.vagrantup.com/docs/boxes/base). See the [vagrant](vagrant/README.md) section for more details.
+
+These Vagrant boxes are also available on [Vagrant Cloud](https://app.vagrantup.com/bobfraser1).
