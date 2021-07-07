@@ -12,9 +12,7 @@
   "post-processors": [
     [
       {
-        "include": [
-          "info.json"
-        ],
+        "include": ["info.json"],
         "output": "output-vagrant/{{user `box_name`}}.box",
         "type": "vagrant",
         "vagrantfile_template": "Vagrantfile"
@@ -22,7 +20,7 @@
     ]
   ],
   "variables": {
-    "box_name": "alpine312",
-    "vm_name": "alpine-3.12.0-x86_64"
+    "box_name": "alpine314",
+    "vm_name": "alpine-3.14.0-x86_64"
   }
 }

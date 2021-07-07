@@ -20,10 +20,7 @@
       "headless": false,
       "http_directory": "http",
       "iso_checksum": "{{user `iso_checksum_type`}}:{{user `iso_checksum`}}",
-      "iso_urls": [
-        "{{user `iso_local_url`}}",
-        "{{user `iso_download_url`}}"
-      ],
+      "iso_urls": ["{{user `iso_local_url`}}", "{{user `iso_download_url`}}"],
       "keep_registered": "false",
       "shutdown_command": "/sbin/poweroff",
       "ssh_password": "{{user `ssh_password`}}",
@@ -31,36 +28,12 @@
       "ssh_username": "root",
       "type": "virtualbox-iso",
       "vboxmanage": [
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--memory",
-          "{{user `memory`}}"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--cpus",
-          "{{user `cpus`}}"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--rtcuseutc",
-          "on"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--graphicscontroller",
-          "vmsvga"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--vrde",
-          "off"
-        ]
+        ["modifyvm", "{{.Name}}", "--memory", "{{user `memory`}}"],
+        ["modifyvm", "{{.Name}}", "--cpus", "{{user `cpus`}}"],
+        ["modifyvm", "{{.Name}}", "--rtcuseutc", "on"],
+        ["modifyvm", "{{.Name}}", "--graphicscontroller", "vmsvga"],
+        ["modifyvm", "{{.Name}}", "--vram", "6"],
+        ["modifyvm", "{{.Name}}", "--vrde", "off"]
       ],
       "vm_name": "{{user `vm_name`}}"
     }
@@ -69,10 +42,10 @@
   "provisioners": [
     {
       "inline": [
-        "echo http://dl-cdn.alpinelinux.org/alpine/v3.12/community >> /etc/apk/repositories",
+        "echo http://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories",
         "apk update",
         "apk add sudo",
-        "apk add virtualbox-guest-additions virtualbox-guest-modules-virt",
+        "apk add virtualbox-guest-additions",
         "echo '%wheel ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/wheel",
         "user={{user `ssh_username`}}",
         "echo Add user $user with NOPASSWD sudo",
@@ -94,15 +67,15 @@
   "variables": {
     "cpus": "1",
     "disk_size": "10240",
-    "iso_checksum": "fe694a34c0e2d30b9e5dea7e2c1a3892c1f14cb474b69cc5c557a52970071da5",
+    "iso_checksum": "d568c6c71bb1eee0f65cdf40088daf57032e24f1e3bd2cf8a813f80d2e9e4eab",
     "iso_checksum_type": "sha256",
-    "iso_download_url": "http://dl-cdn.alpinelinux.org/alpine/v3.12/releases/x86_64/alpine-virt-3.12.0-x86_64.iso",
-    "iso_local_url": "../../iso/alpine-virt-3.12.0-x86_64.iso",
+    "iso_download_url": "http://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/alpine-virt-3.14.0-x86_64.iso",
+    "iso_local_url": "../../iso/alpine-virt-3.14.0-x86_64.iso",
     "memory": "1024",
     "root_password": "vagrant",
     "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key",
     "ssh_password": "vagrant",
     "ssh_username": "vagrant",
-    "vm_name": "alpine-3.12.0-x86_64"
+    "vm_name": "alpine-3.14.0-x86_64"
   }
 }
