@@ -5,10 +5,12 @@
         "root<enter><wait>",
         "ifconfig eth0 up && udhcpc -i eth0<enter><wait5>",
         "wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/answers<enter><wait>",
-        "setup-apkrepos -1<enter><wait>",
-        "printf \"{{user `root_password`}}\\n{{user `root_password`}}\\ny\\n\" | setup-alpine -f $PWD/answers ; ",
-        "mount /dev/sda3 /mnt && ",
-        "echo 'PermitRootLogin yes' >> /mnt/etc/ssh/sshd_config && ",
+        "setup-apkrepos -1<enter><wait5>",
+        "ERASE_DISKS='/dev/sda' setup-alpine -f $PWD/answers<enter><wait5>",
+        "{{user `ssh_password`}}<enter><wait>",
+        "{{user `ssh_password`}}<enter><wait30>",
+        "mount /dev/sda3 /mnt<enter>",
+        "echo 'PermitRootLogin yes' >> /mnt/etc/ssh/sshd_config<enter>",
         "umount /mnt ; reboot<enter>"
       ],
       "boot_wait": "10s",
@@ -43,6 +45,7 @@
     {
       "inline": [
         "echo http://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories",
+        "setup-keymap de de",
         "apk update",
         "apk add sudo",
         "apk add virtualbox-guest-additions",
