@@ -45,7 +45,6 @@
     {
       "inline": [
         "echo http://dl-cdn.alpinelinux.org/alpine/v3.14/community >> /etc/apk/repositories",
-        "setup-keymap de de",
         "apk update",
         "apk add sudo",
         "apk add virtualbox-guest-additions",

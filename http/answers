@@ -19,7 +19,7 @@ iface eth0 inet dhcp
 # DNSOPTS="-d example.com 8.8.8.8"
 
 # Set timezone to UTC
-TIMEZONEOPTS="-z Europe/Berlin"
+TIMEZONEOPTS="-z UTC"
 
 # set http/ftp proxy
 PROXYOPTS="none"
@@ -30,8 +30,8 @@ APKREPOSOPTS="-1"
 # Install Openssh
 SSHDOPTS="-c openssh"
 
-# Use chrony
-NTPOPTS="-c chrony"
+# Use openntpd
+NTPOPTS="-c openntpd"
 
 # Use /dev/sda as a system disk
 DISKOPTS="-m sys /dev/sda"
