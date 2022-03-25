@@ -24,7 +24,7 @@ You can then use vagrant commands to add, init, and run the box.
 
 ### Building and Publishing
 
-- Set the environment variable `VC_TOKEN` to your Vagrant Cloud access token.
+- Set the environment variable `ATLAS_TOKEN` to your Vagrant Cloud access token.
 - Edit vagrant-cloud.json and update `box_tag` to match your Vagrant Cloud account name and box name.
 - Edit `box_version` and set a unique version number.
 - From the `vagrant` directory run `packer build vagrant-cloud.json`.
