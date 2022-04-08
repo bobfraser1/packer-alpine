@@ -69,15 +69,15 @@
   "variables": {
     "cpus": "1",
     "disk_size": "10240",
-    "iso_checksum": "d9bb25668c84b3cee75a7121116e4a11f595dc2885cde4dd20371c44486a60a0",
+    "iso_checksum": "11cb6ceec4967e0089c44268d2cc7b4efbad74f40d962ecec558e1a8fb6f2ac9",
     "iso_checksum_type": "sha256",
-    "iso_download_url": "http://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-virt-3.15.2-x86_64.iso",
-    "iso_local_url": "../../iso/alpine-virt-3.15.2-x86_64.iso",
+    "iso_download_url": "http://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-virt-3.15.4-x86_64.iso",
+    "iso_local_url": "../../iso/alpine-virt-3.15.4-x86_64.iso",
     "memory": "1024",
     "root_password": "vagrant",
     "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6NF8iallvQVp22WDkTkyrtvp9eWW6A8YVr+kz4TjGYe7gHzIw+niNltGEFHzD8+v1I2YJ6oXevct1YeS0o9HZyN1Q9qgCgzUFtdOKLv6IedplqoPkcmF0aYet2PkEDo3MlTBckFXPITAMzF8dJSIFo9D8HfdOV0IAdx4O7PtixWKn5y2hMNG0zQPyUecp4pzC6kivAIhyfHilFR61RGL+GPXQ2MWZWFYbAGjyiYJnAmCP3NOTd0jMZEnDkbUvxhMmBYSdETk1rRgm+R4LOzFUGaHqHDLKLX+FIPKcF96hrucXzcWyLbIbEgE98OHlnVYCzRdK8jlqm8tehUc9c9WhQ== vagrant insecure public key",
     "ssh_password": "vagrant",
     "ssh_username": "vagrant",
-    "vm_name": "alpine-3.15.2-x86_64"
+    "vm_name": "alpine-3.15.4-x86_64"
   }
 }

@@ -1,5 +1,9 @@
 # Change log for packer-alpine
 
+## v1.2.1
+
+This release builds a VirtualBox VM (OVA) for Alpine 3.15.4
+
 ## v1.2.0
 
 This release builds a VirtualBox VM (OVA) for Alpine 3.15.2

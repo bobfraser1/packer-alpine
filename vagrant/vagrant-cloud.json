@@ -29,9 +29,9 @@
   "variables": {
     "box_name": "alpine315",
     "box_tag": "bobfraser1/alpine315",
-    "box_version": "1.0.0",
-    "box_version_description": "Alpine Linux v3.15.2\n\nGitHub: [bobfraser1/packer-alpine](https://github.com/bobfraser1/packer-alpine)",
+    "box_version": "1.0.1",
+    "box_version_description": "Alpine Linux v3.15.4\n\nGitHub: [bobfraser1/packer-alpine](https://github.com/bobfraser1/packer-alpine)",
     "vagrant_cloud_token": "{{env `ATLAS_TOKEN`}}",
-    "vm_name": "alpine-3.15.2-x86_64"
+    "vm_name": "alpine-3.15.4-x86_64"
   }
 }
