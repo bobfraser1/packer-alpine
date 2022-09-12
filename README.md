@@ -8,7 +8,7 @@ Build a virtual machine image for [Alpine linux](https://www.alpinelinux.org) us
 
 This Packer template will build a [VirtualBox](https://www.virtualbox.org) VM (OVA) from an Alpine ISO image. Networking is configured for DHCP and an SSH user is created (default `vagrant` password `vagrant`) with sudo privileges.
 
-**Security Note:** The Vagrant [insecure public key](https://github.com/hashicorp/vagrant/tree/master/keys) has been added. You can override `ssh_key` to provide your own secure ssh key.
+**Security Note:** The Vagrant [insecure public key](https://github.com/hashicorp/vagrant/tree/master/keys) has been added. You can replace `http/ssh.keys` to provide your own secure ssh key.
 
 You can customize this login
 
