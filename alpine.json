@@ -84,6 +84,7 @@
         "apk upgrade",
         "apk add virtualbox-guest-additions",
         "apk add sudo",
+        "echo '127.0.0.1       alpine alpine.localdomain' >> /etc/hosts",
         "user={{user `ssh_username`}}",
         "echo Add user $user with NOPASSWD sudo",
         "echo $user 'ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers.d/$user",
